@@ -1,8 +1,7 @@
 <template>
   <v-layout row wrap>
     <card6/>
-    <card3/>
-    <card3/>
+    <card6/>
     <card4/>
     <card4/>
     <card4/>
@@ -35,6 +34,7 @@ import card4 from "@/components/card4.vue";
 import card3 from "@/components/card3.vue";
 import card2 from "@/components/card2.vue";
 import card1 from "@/components/card1.vue";
+import view from "@/components/view.vue";
 export default {
   name: "App",
   components: {
@@ -42,7 +42,8 @@ export default {
     card4,
     card3,
     card2,
-    card1
+    card1,
+    view
   },
   data() {
     return {};
