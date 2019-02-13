@@ -1,28 +1,33 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container grid-list-md>
+    <v-layout row wrap>
+      <bar/>
+      <br>
+      <br>
+      <router-link to="home">Home</router-link>
+      <router-link to="view">view</router-link>
+      <router-view></router-view>
+    </v-layout>
+    <v-footer class="pa-3">
+      <v-spacer></v-spacer>
+      <div>Carthweel Galaxy Inc. &copy; {{ new Date().getFullYear() }}</div>
+    </v-footer>
+  </v-container>
 </template>
 
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import home from "@/components/home.vue";
+import bar from "@/components/bar.vue";
 export default {
-  name: 'app',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    home,
+    bar
+  },
+  data() {
+    return {};
+  },
+  methods: {}
+};
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
